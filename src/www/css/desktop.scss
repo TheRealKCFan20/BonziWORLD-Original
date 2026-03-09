@@ -1,0 +1,99 @@
+@import "desktop.vaporwave";
+
+#content {
+	background-color: #6d33a0;
+	background-image:
+		url("../img/desktop/logo.png"),
+		url("../img/desktop/bg.png");
+	background-position:
+		top left,
+		center;
+	background-repeat: no-repeat;
+}
+
+#chat_bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	background-image: url("../img/desktop/taskbar.png");
+	background-size: 100% 100%;
+	z-index: 999;
+}
+
+#chat_tray {
+	background-image: 
+	url("../img/desktop/notif_left.png"),
+		url("../img/desktop/notif.png");
+	background-repeat: no-repeat;		
+	background-position: left;
+	background-size: 
+		5px 30px,
+		100% 100%;
+	vertical-align: middle;
+	padding-left: 7px;
+	padding-top: 3px;
+	width: 22px;
+}
+
+.chat_bar_top {
+	top: 0;
+}
+
+#chat_send {
+	width: 100px;
+	user-select: none;
+	background-image: url("../img/desktop/start.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	color: #fff;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+	font-size: 16px;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
+	padding-left: 35px;
+
+	&:hover {
+		background-position: 0 -33px;
+	}
+
+	&:active {
+		background-position: 0 -67px;
+	}
+}
+
+#chat_message_cont {
+	padding: 4px;
+}
+
+#chat_message {
+	width: 100%;
+}
+
+#room_info {
+	color: rgba(255,255,255,0.5);
+	font-weight: bold;
+	line-height: 125%;
+	text-align: right;
+	padding: 7px;
+	font-size: 10px;
+	position: absolute;
+	bottom: 30px;
+	right: 0;
+	user-select: text;
+	-webkit-user-select: text;
+}
+
+.tray_btn {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin: 2px 0px;
+}
+
+#btn_tile {
+	background-image: url("../img/desktop/tile.png");	
+}
