@@ -1,3 +1,4 @@
+var isChromeApp = false;
 var isMobileApp = true;
 var isApp = true;
 var isDesktop = false;
