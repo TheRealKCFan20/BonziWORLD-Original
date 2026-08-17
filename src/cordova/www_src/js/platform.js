@@ -20,7 +20,7 @@ $(function() {
 		url: "http://bonziworld.com",	// BonziWORLD, huh? Let's check it out.
 		timeout: 7777, 					// GRAND GET!
 		type: "GET",					// AJAX?!?!
-		cache: false					// GRAND GET
+		cache: false					// GRAND GET?!
 	}).fail(function() { 				// GRAND GET?!?!
 		$("#page_error").show();		// WHAT THE, GRAND GET?!?!?!
 	});									// OHHHH
