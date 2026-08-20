@@ -1,4 +1,4 @@
-# BonziWORLD: The Throwback!
+# BonziWORLD Throwback
 
 This repository is a fork of the [original](https://github.com/TheRealKCFan20/BonziWORLD). It will be updated frequently to be fully secure and fix problems with either the server or the client.
 
