@@ -18,6 +18,7 @@ exports.beat = function() {
 
 function checkRoomEmpty(room) {
     if (room.users.length != 0) return;
+    if (room.rid === "default") return;
 
     log.info.log('debug', 'removeRoom', {
         room: room
@@ -113,6 +114,10 @@ function newRoom(rid, prefs) {
         rid: rid
     });
 }
+
+// Create the persistent public "default" room
+newRoom("default", settings.prefs.public);
+roomsPublic.push("default");
 
 let userCommands = {
     "godmode": function(word) {
