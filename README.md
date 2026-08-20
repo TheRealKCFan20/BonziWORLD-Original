@@ -2,7 +2,7 @@
 
 This repository is a fork of the [original](https://github.com/TheRealKCFan20/BonziWORLD). It will be updated frequently to be fully secure and fix problems with either the server or the client.
 
-All the source code for the server and client is publicly available here. If you want to run your own BonziWORLD Thorwback, by all means go ahead. Do whatever you'd like with this code. _Just try to put me somewhere in the credits._
+All the source code for the server and client is publicly available here. If you want to run your own BonziWORLD Throwback, by all means go ahead. Do whatever you'd like with this code. _Just try to put me somewhere in the credits._
 
 ## Dependencies
 - Node.js and npm
