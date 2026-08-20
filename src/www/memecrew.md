@@ -12,5 +12,3 @@
 * ~~Hex~~
 * kekilia
 * electimon
-
-If you want to be listed here, just email me and I'll probably put you in the next version.
