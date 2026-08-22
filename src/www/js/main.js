@@ -34,7 +34,7 @@ function login() {
 $(function() {
 	$("#login_go").click(loadTest);
 
-	$("#login_room").val(window.location.hash.slice(1));
+    $("#login_room").val(window.location.hash.slice(1) || "default");
 
 	$("#login_name, #login_room").keypress(function(e) {
 		if(e.which == 13) login();

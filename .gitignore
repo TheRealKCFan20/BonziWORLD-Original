@@ -1,6 +1,6 @@
 src/node_modules/**
 src/.sass-cache/**
-
+src/yomomsofat/***
 src/cordova/platforms/**
 src/cordova/node_modules/**
 src/cordova/plugins/**

@@ -1,3 +1,4 @@
+var isChromeApp = false;
 var isMobileApp = false;
 var isApp = false;
 var isDesktop = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i) == null;

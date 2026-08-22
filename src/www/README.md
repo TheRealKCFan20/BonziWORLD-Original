@@ -63,7 +63,7 @@ If you see any brackets, they indicate a placeholder. Don't type them in.
 
 Obviously no illegal shit. On top of that, there are a few limitations:
 
-* All strings are sanitized to get rid of any malicious HTML/JS/CSS. _Don't even try it motherfucker._
+* All strings are sanitized to get rid of any malicious HTML/JS/CSS. _Don't even try it, Only the contributors and/or no contributors can do itself._
 * There is a 2500 character limit in public rooms and a 5000 limit in private rooms.
 	* Yes, the Navy Seals copypasta fits.
 * There is a 25 character limit on names.
