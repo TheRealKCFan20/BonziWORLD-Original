@@ -1,6 +1,6 @@
 # BonziWORLD
 
-This project has been discontinued due to my time being taken up by other responsibilities. ~~Thanks for all the laughs and memes along the way.~~
+This project has been discontinued due to my time being taken up by other responsibilities. Thanks for all the laughs and memes along the way.
 
 **This project was unarchived in order to document security issues. However, barely anyone used issues for that purpose are more often created irrelevant complaints. To be clear, *I no longer have anything to do with any actively hosted instance of BonziWORLD or any of the community.* Do not bug me about anything related to BonziWORLD, I have nothing to do with it and no longer want anything to do with it.**
 
