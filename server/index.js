@@ -60,7 +60,7 @@ Ban.init();
 server.listen(port, function () {
 	console.log(
 		" Welcome to BonziWORLD!\n",
-		"Time to meme!\n",
+		"It's time for the memes!\n",
 		"----------------------\n",
 		"Server listening at port " + port
 	);
