@@ -48,7 +48,6 @@ If you see any brackets, they indicate a placeholder. Don't type them in.
 * `/asshole [name]` - Call someone an asshole.
 	* Don't ask why I implemented this. There's no answer.
 	* You can also right click on people to do the same thing.
-	* If you ever see a person named "fuG", make sure to call them an asshole.
 * `/owo [name]` - owo, wat dis?
 	* kill me
 	* Works pretty much the same as /asshole, right click and all.
@@ -61,14 +60,14 @@ If you see any brackets, they indicate a placeholder. Don't type them in.
 
 ## Are there any rules?
 
-Obviously no illegal shit. On top of that, there are a few limitations:
+Obviously no illegal content. On top of that, there are a few limitations:
 
-* All strings are sanitized to get rid of any malicious HTML/JS/CSS. _Don't even try it motherfucker._
-* There is a 2500 character limit in public rooms and a 5000 limit in private rooms.
+* All strings are sanitized to get rid of any malicious HTML/JS/CSS.
+* There is so many character limits in the both rooms.
 	* Yes, the Navy Seals copypasta fits.
-* There is a 25 character limit on names.
-* A max of 8 people are allowed in a public lobby. After that, a new public room will be created. A max of 30 people are allowed in private lobbies.
-	* (Yeah, I know I changed the limit down from 15. With the limited screen space and processing power on mobile, this was part of the reason things were running so shitty.)
+* A max of **8 people** are allowed in a public lobby. After that, a new public room will be created.
+	* Yeah, I know the creator changed the limit down from 15. With the limited screen space and processing power on mobile, this was part of the reason things were running so shitty.
+*  A max of **30 people** are allowed in private lobbies.
 
 Remember that people can play YouTube videos whenever they want. **Keep your volume down, headphone users.** Chat rooms are for the most part unmoderated. If shit starts getting spambotty, I might start using my banhammer.
 
@@ -81,7 +80,7 @@ Remember that people can play YouTube videos whenever they want. **Keep your vol
 * Grunt
 * Winston ~~(hi there)~~
 * Express
-* Create.js (Easel.js && Preload.js)
+* Create.js (Easel.js & Preload.js)
 * jQuery
 * jquery-contextmenu
 * speak.js
