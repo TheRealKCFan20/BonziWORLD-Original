@@ -20,6 +20,8 @@ git clone -b master https://github.com/TheRealKCFan20/BonziWORLD-Original
 cd BonziWORLD-Original
 ```
 
+### Client
+This part is unneeded. An pre-built version is available.
 ### Server
 ```
 cd server
