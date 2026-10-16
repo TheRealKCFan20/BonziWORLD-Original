@@ -34,6 +34,7 @@
 	
 	// Web Worker
 	var speakWorker;
+	speak._pendingCallbacks = [];
 	try {
 		// https://github.com/yoshi6jp/speak.js/commit/b85d385024f1e20818aa9e3b272c86aa9fc2ebe6
 		speakWorker = new Worker(document.querySelector('script[src$="speakClient.js"]').getAttribute('src').replace(/speakClient.js$/, 'speakWorker.js'));
@@ -116,13 +117,12 @@
 		} else {
 			// Call the worker, which will return a wav that we then play
 			var startTime = Date.now();
-			speakWorker.onmessage = function (event) {
-				if (PROFILE) console.log('speak.js: worker processing took ' + (Date.now() - startTime).toFixed(2) + ' ms');
-				handleWav(event.data);
-			};
-			speakWorker.postMessage({ text: text, args: args });
-		}
-	};
+            (function(localHandleWav) {
+                    speak._pendingCallbacks.push(function(data) {
+                            if (PROFILE) console.log('speak.js: worker processing took ' + (Date.now() - startTime).toFixed(2) + ' ms');
+                                    localHandleWav(data);
+                                });
+                        })(handleWav);
 	
 	// Expose speak to the global object
 	window.speak = speak;
