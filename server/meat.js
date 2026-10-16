@@ -37,6 +37,13 @@ class Room {
         this.rid = rid;
         this.prefs = prefs;
         this.users = [];
+        this.serverGuid = Utils.guidGen();
+        this.serverPublic = {
+            name: "SERVER",
+            color: "green",
+            speed: 175,
+            pitch: 65
+        };
     }
 
     deconstruct() {
@@ -96,10 +103,17 @@ class Room {
 
     getUsersPublic() {
         let usersPublic = {};
+        usersPublic[this.serverGuid] = this.serverPublic;
         this.users.forEach((user) => {
             usersPublic[user.guid] = user.public;
         });
         return usersPublic;
+		    }
+    announce(text) {
+        this.emit('talk', {
+            guid: this.serverGuid,
+            text: text
+        });
     }
 
     emit(cmd, data) {
@@ -389,6 +403,13 @@ class User {
         this.socket.on('talk', this.talk.bind(this));
         this.socket.on('command', this.command.bind(this));
         this.socket.on('disconnect', this.disconnect.bind(this));
+		
+        // SERVER join announcement (delay so client finishes initializing)
+        var joinName = this.public.name;
+        var joinRoom = this.room;
+        setTimeout(function() {
+            joinRoom.announce(joinName + " has joined the chat.");
+        }, 600);
     }
 
     talk(data) {
@@ -475,7 +496,12 @@ class User {
 			ip: ip,
 			port: port
 		});
-         
+		
+                 // SERVER leave announcement
+        if (this.room) {
+            this.room.announce(this.public.name + " has left the chat.");
+        }
+
         this.socket.broadcast.emit('leave', {
             guid: this.guid
         });
