@@ -23,8 +23,10 @@ function loadTest() {
 }
 
 function login() {
+        var name = $("#login_name").val();
+        if (name) localStorage.setItem("bonzi_nickname", name);
 	socket.emit("login", {
-		name: $("#login_name").val(),
+		name: name,
 		room: $("#login_room").val()
 	});
 
@@ -33,7 +35,9 @@ function login() {
 
 $(function() {
 	$("#login_go").click(loadTest);
-
+	
+    $("#login_name").val(localStorage.getItem("bonzi_nickname") || "");
+	
 	$("#login_room").val(window.location.hash.slice(1) || "default");
 
 	$("#login_name, #login_room").keypress(function(e) {
