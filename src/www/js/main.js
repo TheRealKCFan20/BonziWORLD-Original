@@ -1,7 +1,7 @@
 // http://stackoverflow.com/a/26118970
 var undefined;
 var hostname = isApp ? "bonziworld.com" : window.location.hostname;
-var socket = io("http://" + hostname + ":3000");
+var socket = isApp ? io("https://" + hostname) : io();
 
 var usersPublic = {};
 var bonzis = {};

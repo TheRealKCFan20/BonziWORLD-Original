@@ -39,7 +39,7 @@ if (settings.express.serveStatic)
 var server = require('http').createServer(app);
 
 // Init socket.io
-var io = require('socket.io')(server);
+var io = new (require('socket.io').Server)(server);
 var port = process.env.PORT || settings.port;
 
 exports.io = io;
@@ -57,7 +57,7 @@ const Ban = require('./ban.js');
 Ban.init();
 
 // Start actually listening
-server.listen(port, function () {
+server.listen(port, '0.0.0.0', function () {
 	console.log(
 		" Welcome to BonziWORLD!\n",
 		"It's time for the memes!\n",
