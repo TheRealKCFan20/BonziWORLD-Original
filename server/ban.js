@@ -40,10 +40,7 @@ exports.addBan = function(ip, length, reason) {
 	};
 
 	var sockets = io.sockets.sockets;
-    var socketList = Array.from(sockets.keys());
-
-	for (var i = 0; i < socketList.length; i++) {
-    var socket = sockets.get(socketList[i]);
+    var socketList = Object.keys(sockets);
 
 	for (var i = 0; i < socketList.length; i++) {
 		var socket = sockets[socketList[i]];
@@ -78,10 +75,10 @@ exports.handleBan = function(socket) {
 
 exports.kick = function(ip, reason) {
 	var sockets = io.sockets.sockets;
-	var socketList = Array.from(sockets.keys());
+	var socketList = Object.keys(sockets);
 
 	for (var i = 0; i < socketList.length; i++) {
-		var socket = sockets.get(socketList[i]);
+		var socket = sockets[socketList[i]];
 		if (socket.request.connection.remoteAddress == ip) {
 			socket.emit('kick', {
 				reason: reason || "N/A"

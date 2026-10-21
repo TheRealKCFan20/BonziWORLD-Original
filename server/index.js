@@ -39,7 +39,7 @@ if (settings.express.serveStatic)
 var server = require('http').createServer(app);
 
 // Init socket.io
-var io = new (require('socket.io').Server)(server);
+var io = require('socket.io')(server);
 var port = process.env.PORT || settings.port;
 
 exports.io = io;
